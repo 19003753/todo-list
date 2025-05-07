@@ -19,7 +19,7 @@ function TaskItem({ name, description, dueDate, createdAt, onDelete, onEdit }) {
 
         {/* Fechas y Botones */}
         <div className="d-flex justify-content-between w-100 mt-auto">
-          {/* Izquierda: Fecha de ingreso + Botón editar */}
+          {/* lado izquierdo */}
           <div className="d-flex flex-column align-items-center w-50">
             <p className="mb-1 text-center">
               <small className="text-muted">Fecha de ingreso:</small>
@@ -32,7 +32,7 @@ function TaskItem({ name, description, dueDate, createdAt, onDelete, onEdit }) {
             </button>
           </div>
 
-          {/* Derecha: Fecha límite + Botón eliminar */}
+          {/* lado derecho */}
           <div className="d-flex flex-column align-items-center w-50">
             <p className="mb-1 text-center">
               <small className="text-muted">Fecha límite:</small>
