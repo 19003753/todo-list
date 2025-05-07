@@ -1,4 +1,4 @@
-# To-Do List Backend
+# To-Do List
 
 Proyecto backend desarrollado en Node.js + Express para gestionar tareas (Tasks) y metas personales (Goals) como una lista de pendientes (To-Do List).
 
