@@ -1,0 +1,227 @@
+{
+	"info": {
+		"_postman_id": "ea6956b1-f717-4e01-b8e0-6023b8c8c4f4",
+		"name": "todo-list",
+		"description": "Proyecto backend desarrollado en Node.js + Express para gestionar tareas (Tasks) y metas personales (Goals) como una lista de pendientes (To-Do List).\n\n## 🚀 Tecnologías utilizadas\n\n- Node.js (versión LTS)\n    \n- Express.js\n    \n- dotenv\n    \n\n## ⚙️ Instalación y ejecución\n\n1. git clone https://github.com/tu-usuario/tu-repositorio.gitcd tu-repositorio\n    \n2. npm install\n    \n3. API_KEY=midemokey123PORT=3000\n    \n4. node app.js\n    \n\n## 🛡️ Autenticación\n\nTodas las peticiones deben incluir en los headers el parámetro:\n\n| Key | Value |\n| --- | --- |\n| Authorization | midemokey123 |\n\nSi el `Authorization` es incorrecto o falta, el servidor responde con error 401 Unauthorized.\n\n## 📚 Endpoints disponibles\n\n| Método | Endpoint | Descripción |\n| --- | --- | --- |\n| GET | /getTasks | Obtiene la lista de tareas |\n| POST | /addTask | Agrega una nueva tarea |\n| DELETE | /removeTask | Elimina una tarea existente |\n| GET | /getGoals | Obtiene la lista de metas |\n| POST | /addGoal | Agrega una nueva meta |\n| DELETE | /removeGoal | Elimina una meta existente |",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "42863276"
+	},
+	"item": [
+		{
+			"name": "Obtener Tareas",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "midemokey123",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/getTasks",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"getTasks"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Añadir Tareas",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "midemokey123",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"task\": \"Estudiar para el examen\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/addTask",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"addTask"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Eliminar Tareas",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "midemokey123",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"task\": \"Estudiar para el examen\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/removeTask",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"removeTask"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Añadir Meta",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "midemokey123",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"goal\": \"Terminar el proyecto de Node.js\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/addGoal",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"addGoal"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Obtener Metas",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "midemokey123",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:3000/getGoals",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"getGoals"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Eliminar Meta",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "midemokey123",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"goal\": \"Terminar el proyecto de Node.js\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/removeGoal",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"removeGoal"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
