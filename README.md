@@ -64,4 +64,4 @@ Si el `Authorization` es incorrecto o falta, el servidor responde con error 401 
 
 ## 👨‍💻 Autor
 
-Sebastián Vargas
+Juan Vargas 19003753
