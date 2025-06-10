@@ -79,4 +79,4 @@ Puedes crear una imagen Docker del proyecto usando un `Dockerfile` tanto para el
 
 ---
 
-🎉 Proyecto desarrollado por [Tu Nombre] como entrega final del curso.
+🎉 Proyecto desarrollado por Juan Vargas 19003753 como entrega de la actividad 6.
