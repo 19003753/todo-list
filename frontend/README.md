@@ -1,67 +1,82 @@
-# To-Do List Backend
 
-Proyecto backend desarrollado en Node.js + Express para gestionar tareas (Tasks) y metas personales (Goals) como una lista de pendientes (To-Do List).
+# 📝 To Do List - Actividad 6
 
-## 🚀 Tecnologías utilizadas
+Este proyecto es una aplicación web desarrollada como parte de la Actividad 6 del curso, con el objetivo de llevar el control de Tareas y Metas personales (To Do List).
 
-- Node.js (versión LTS)
-- Express.js
-- dotenv
-- MongoDB (con Mongoose)
+## 🚀 Funcionalidades
 
-## ⚙️ Instalación y ejecución
+- ✅ Agregar y eliminar tareas.
+- 🎯 Agregar y eliminar metas personales utilizando Redux.
+- 📆 Asignar fecha límite a las tareas.
+- 🔐 Autenticación simple mediante API Key.
+- 🌐 Comunicación completa entre backend y frontend.
+- 🐳 Preparado para integrarse en una imagen Docker (opcional).
 
-1. Clonar el repositorio:
-   ```bash
-   git clone https://github.com/tu-usuario/tu-repositorio.git
-   cd tu-repositorio
-   ```
+## 🧱 Tecnologías usadas
 
-2. Instalar dependencias:
+### Frontend
+- React.js
+- Redux Toolkit
+- Axios
+- Bootstrap
+
+### Backend
+- Node.js con Express
+- MongoDB + Mongoose
+- Dotenv para manejo de variables de entorno
+
+## 🗂️ Estructura del proyecto
+
+```
+todo-list/
+├── backend/
+│   ├── app.js
+│   ├── models/
+│   ├── database.js
+│   └── .env
+├── frontend/
+│   ├── src/
+│   │   ├── components/
+│   │   ├── redux/
+│   │   ├── App.jsx
+│   │   └── main.jsx
+│   └── public/
+```
+
+## 📡 Endpoints del Backend
+
+- `POST /addTask`: Agrega una nueva tarea.
+- `GET /getTasks`: Obtiene todas las tareas.
+- `DELETE /removeTask`: Elimina una tarea.
+- `POST /addGoal`: Agrega una nueva meta.
+- `GET /getGoals`: Obtiene todas las metas.
+- `DELETE /removeGoal`: Elimina una meta.
+
+⚠️ Todos los endpoints requieren el header:
+```
+Authorization: 123@
+```
+
+## 🐳 Docker (opcional)
+
+Puedes crear una imagen Docker del proyecto usando un `Dockerfile` tanto para el frontend como el backend. (Si decides hacerlo, recuerda exponer los puertos correctamente).
+
+## 📥 Instalación y ejecución local
+
+1. Clona el repositorio
+2. Instala dependencias en backend y frontend:
    ```bash
    npm install
    ```
-
-3. Crear un archivo `.env` con el siguiente contenido:
-   ```
-   API_KEY=midemokey123
-   PORT=3000
-   MONGODB_URI=mongodb://localhost:27017/todolist
-   ```
-
-4. Iniciar el servidor:
+3. Ejecuta el backend:
    ```bash
-   npm start
+   node app.js
+   ```
+4. Ejecuta el frontend (dentro de la carpeta `frontend`):
+   ```bash
+   npm run dev
    ```
 
-## 🛡️ Autenticación
+---
 
-Todas las peticiones deben incluir en los headers el parámetro:
-
-| Key           | Value         |
-|---------------|---------------|
-| Authorization | midemokey123  |
-
-Si el `Authorization` es incorrecto o falta, el servidor responde con error 401 Unauthorized.
-
-## 📚 Endpoints disponibles
-
-| Método | Endpoint       | Descripción                            |
-|--------|----------------|-----------------------------------------|
-| GET    | /getTasks       | Obtiene la lista de tareas desde MongoDB |
-| POST   | /addTask        | Agrega una nueva tarea a MongoDB        |
-| DELETE | /removeTask     | Elimina una tarea por ID en MongoDB     |
-| GET    | /getGoals       | Obtiene la lista de metas desde MongoDB |
-| POST   | /addGoal        | Agrega una nueva meta a MongoDB         |
-| DELETE | /removeGoal     | Elimina una meta por ID en MongoDB      |
-
-## 🛠️ Notas importantes
-
-- Los datos ahora se almacenan en MongoDB, no en memoria.
-- Se utilizan modelos definidos con Mongoose (`Task` y `Goal`).
-- Las tareas y metas se eliminan usando su identificador único (`_id`).
-- Proyecto desarrollado para fines educativos.
-
-## 👨‍💻 Autor
-
-Juan Vargas 19003753
+🎉 Proyecto desarrollado por [Tu Nombre] como entrega final del curso.
