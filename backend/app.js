@@ -2,6 +2,7 @@ require("dotenv").config();
 
 const express = require("express");
 const app = express();
+const cors = require("cors");
 const connectDB = require("./database");
 const Task = require("./models/Task");
 const Goal = require("./models/Goal");
@@ -9,8 +10,7 @@ const Goal = require("./models/Goal");
 console.log("Conectando a MongoDB...");
 connectDB();
 
-app.use(express.json());
-
+app.use(cors());
 app.use(express.json());
 
 let tasks = [];
